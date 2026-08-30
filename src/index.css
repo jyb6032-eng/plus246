@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  .font-jua {
+    font-family: 'Jua', cursive, sans-serif;
+  }
+}
+
+/* Custom 3D button and RPG styling */
+.rpg-btn {
+  transition: all 0.15s ease-out;
+  transform: translateY(0);
+}
+.rpg-btn:active {
+  transform: translateY(2px);
+}
+
+/* Print styling for Student Account Cards (A4 format) */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .print-page {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 10mm !important;
+    box-sizing: border-box !important;
+  }
+  .print-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12mm !important;
+  }
+  .print-card {
+    border: 2px dashed #64748b !important;
+    page-break-inside: avoid !important;
+    padding: 16px !important;
+    border-radius: 8px !important;
+    background: white !important;
+  }
+}
+
